@@ -4,13 +4,20 @@
   "description": "A web crawler implemented in JS.",
   "main": "index.js",
   "scripts": {
-	"start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node main.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
+  "jest": {
+    "transform": {}
+  },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "github.com/edbar42/web_crawler"
   },
   "author": "Eduardo Barroso",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
