@@ -19,7 +19,7 @@ async function crawlPage(baseURL, currURL = baseURL, pages = {}) {
 	pages[normalizedURL] = 1
 
 	console.log(`Now crawling: ${currURL}`)
-	let html = ''
+	let html = ""
 	try {
 		html = await fetchHTML(currURL)
 	} catch (err) {
@@ -47,8 +47,8 @@ async function fetchHTML(url) {
 		throw new Error(`Got HTTP error: ${res.status} ${res.statusText}`)
 	}
 
-	const contentType = res.headers.get('content-type')
-	if (!contentType || !contentType.includes('text/html')) {
+	const contentType = res.headers.get("content-type")
+	if (!contentType || !contentType.includes("text/html")) {
 		throw new Error(`Got non-HTML response: ${contentType}`)
 	}
 
