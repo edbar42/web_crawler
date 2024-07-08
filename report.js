@@ -8,7 +8,7 @@ function makeReport(pages) {
 	console.log("Generating crawling report...")
 	console.log("-----------------------------")
 	for (let key in sortedPages) {
-		console.log(`Found ${sortedPages[key]} internal links to ${key}`)
+		console.log(`Found ${sortedPages[key]} internal link(s) to ${key}`)
 		reportFileContent += `${key},${sortedPages[key]}\n`
 	}
 	fs.writeFile(reportFilePath, reportFileContent, (err) => {
